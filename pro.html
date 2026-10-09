@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" class="page pro-page">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Shelf Shelf Pro</title>
+  <meta name="description" content="Shelf Shelf Pro — Auto-Organize, Daily Digest, Insights, App Windows, Pro Looks and more. Weekly, monthly, yearly or one-time.">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="buy">
+    <header class="buy-hero">
+      <span class="brand-mark big" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <h1><span class="wordmark xl"><b>Shelf</b><span>Shelf</span></span> <span class="pro-badge big">PRO</span></h1>
+      <p>Super powers for your Home Screen. The essentials stay free forever.</p>
+    </header>
+
+    <section id="buy-off" class="buy-card" hidden>
+      <h2>Pro isn’t available yet</h2>
+      <p>Everything in Shelf Shelf is free right now. Enjoy!</p>
+    </section>
+
+    <section id="buy-main" class="buy-card" hidden>
+      <ul class="pro-perks" id="perks"></ul>
+      <div id="plans" class="plan-pick" role="radiogroup" aria-label="Choose a plan"></div>
+      <label class="buy-label" for="email">Your email — for your receipt and licence</label>
+      <input id="email" class="buy-input" type="email" autocomplete="email" placeholder="you@example.com" required>
+      <button id="pay" class="btn primary block pro-cta" type="button">Unlock Pro</button>
+      <div id="price-note" class="pro-note"></div>
+      <div id="buy-msg" class="field-msg" role="alert"></div>
+      <div class="buy-secure">🔒 Secure payment by Razorpay · UPI, cards, net banking, wallets<br>Subscriptions can be cancelled anytime — Pro stays until the end of the paid period.</div>
+    </section>
+
+    <section class="buy-card compare" aria-labelledby="cmp-h">
+      <h2 id="cmp-h">Free vs Pro</h2>
+      <table class="cmp">
+        <thead><tr><th></th><th>Free</th><th>Pro</th></tr></thead>
+        <tbody>
+          <tr><td>Apps, folders, dock, search</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Browser-account sync</td><td>✓</td><td>✓</td></tr>
+          <tr><td>To-dos &amp; reminders</td><td>✓</td><td>✓</td></tr>
+          <tr><td>Quick Note, live timers, Save Open Tabs</td><td>✓</td><td>✓</td></tr>
+          <tr><td>To-do lists</td><td>3</td><td>Unlimited</td></tr>
+          <tr><td>Auto-Organize into folders</td><td>Preview</td><td>✓</td></tr>
+          <tr><td>Liquid Glass &amp; extra themes</td><td>—</td><td>✓</td></tr>
+          <tr><td>Snooze options, repeating to-dos, Daily Digest</td><td>—</td><td>✓</td></tr>
+          <tr><td>App windows &amp; pinned tabs</td><td>—</td><td>✓</td></tr>
+          <tr><td>Insights, backup files</td><td>—</td><td>✓</td></tr>
+        </tbody>
+      </table>
+      <p class="buy-small">Digital product — nothing is shipped; Pro unlocks instantly after payment. Prices include applicable taxes unless shown otherwise at checkout.</p>
+    </section>
+
+    <section id="buy-done" class="buy-card" hidden>
+      <h2>🎉 Pro is yours!</h2>
+      <p id="done-text">Thank you for supporting Shelf Shelf.</p>
+      <button id="activate" class="btn primary block" type="button">Activate in Shelf Shelf</button>
+      <label class="buy-label" for="licence">Your licence key — keep it safe (it’s also how you restore Pro)</label>
+      <textarea id="licence" class="buy-input mono" rows="4" readonly></textarea>
+      <button id="copy" class="btn block" type="button">Copy Licence Key</button>
+      <p class="buy-small">In Shelf Shelf: Settings → Shelf Shelf Pro → Enter Licence Key.</p>
+    </section>
+
+    <section id="restore" class="buy-card">
+      <h2>Restore a purchase</h2>
+      <p class="buy-small">Use the email you paid with and the payment ID (<code>pay_…</code>) or subscription ID (<code>sub_…</code>) from your Razorpay email.</p>
+      <input id="r-email" class="buy-input" type="email" autocomplete="email" placeholder="you@example.com">
+      <input id="r-pid" class="buy-input mono" type="text" placeholder="pay_… or sub_…" spellcheck="false">
+      <button id="r-go" class="btn block" type="button">Get My Licence</button>
+      <div id="r-msg" class="field-msg" role="alert"></div>
+    </section>
+
+    <footer class="buy-foot">
+      <a id="get-ext" href="#" hidden>Get the Chrome extension</a>
+      <a href="./">Open Shelf Shelf on the web</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="refunds.html">Refunds &amp; Cancellation</a>
+      <a href="shipping.html">Delivery</a>
+      <a href="contact.html">Contact</a>
+      <a id="mail" href="#">Help</a>
+    </footer>
+  </main>
+  <script src="js/config.js"></script>
+  <script src="js/pro-checkout.js"></script>
+</body>
+</html>
