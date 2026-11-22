@@ -1,0 +1,70 @@
+{
+  "name": "shelf-shelf",
+  "productName": "Shelf Shelf",
+  "version": "1.0.0",
+  "description": "Shelf Shelf — your favourite sites as apps, folders and a dock, plus to-dos with reminders. Built by H24 Creationz.",
+  "author": { "name": "H24 Creationz", "email": "h24creationz@gmail.com" },
+  "homepage": "https://harshavarthanep.github.io/Shelf-Shelf/download.html",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "prepare-www": "node ../shared/prepare-www.mjs www",
+    "start": "npm run prepare-www && electron .",
+    "build:win": "npm run prepare-www && electron-builder --win --publish never",
+    "build:mac": "npm run prepare-www && electron-builder --mac --publish never",
+    "build:linux": "npm run prepare-www && electron-builder --linux --publish never"
+  },
+  "devDependencies": {
+    "electron": "37.2.6",
+    "electron-builder": "26.0.12"
+  },
+  "build": {
+    "appId": "com.h24creationz.shelfshelf",
+    "productName": "Shelf Shelf",
+    "copyright": "Copyright © H24 Creationz",
+    "files": ["main.js", "preload.js", "www/**/*", "build/icon.png", "package.json"],
+    "directories": { "output": "dist", "buildResources": "build" },
+    "asar": true,
+    "win": {
+      "icon": "build/icon.png",
+      "target": [
+        { "target": "nsis", "arch": ["x64"] },
+        { "target": "portable", "arch": ["x64"] }
+      ]
+    },
+    "nsis": {
+      "artifactName": "ShelfShelf-Setup-${arch}.${ext}",
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Shelf Shelf",
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false
+    },
+    "portable": { "artifactName": "ShelfShelf-Portable.${ext}" },
+    "mac": {
+      "icon": "build/icon.png",
+      "category": "public.app-category.productivity",
+      "target": [{ "target": "dmg", "arch": ["universal"] }],
+      "identity": null,
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false
+    },
+    "dmg": { "artifactName": "ShelfShelf-Mac.${ext}", "title": "Shelf Shelf" },
+    "linux": {
+      "icon": "build/icon.png",
+      "category": "Utility",
+      "maintainer": "H24 Creationz <h24creationz@gmail.com>",
+      "synopsis": "Your favourite sites as apps, plus to-dos with reminders",
+      "target": [
+        { "target": "AppImage", "arch": ["x64"] },
+        { "target": "deb", "arch": ["x64"] }
+      ]
+    },
+    "appImage": { "artifactName": "ShelfShelf-Linux.${ext}" },
+    "deb": { "artifactName": "ShelfShelf-Linux.${ext}" }
+  }
+}

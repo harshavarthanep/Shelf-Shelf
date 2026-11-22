@@ -1,0 +1,12 @@
+{
+  "appId": "com.h24creationz.shelfshelf",
+  "appName": "Shelf Shelf",
+  "webDir": "www",
+  "android": { "allowMixedContent": false, "captureInput": true, "webContentsDebuggingEnabled": false },
+  "ios": { "contentInset": "never" },
+  "plugins": {
+    "SplashScreen": { "launchShowDuration": 500, "launchAutoHide": true, "backgroundColor": "#F2F2F7", "showSpinner": false, "androidScaleType": "CENTER_CROP" },
+    "StatusBar": { "overlaysWebView": false },
+    "LocalNotifications": { "smallIcon": "ic_stat_shelf", "iconColor": "#409BFE" }
+  }
+}

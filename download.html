@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shelf Shelf — Your favourite sites as apps · Chrome extension, Windows, macOS, Linux, Android &amp; iPhone</title>
+<meta name="description" content="Shelf Shelf turns your favourite websites into apps, folders and a dock — plus to-dos with reminders. Free and private. Add the browser extension, download for Windows, macOS, Linux and Android, or use it online.">
+<meta name="author" content="H24 Creationz">
+<meta name="keywords" content="Shelf Shelf, ShelfShelf, app launcher, start page, new tab, dock, speed dial, to-do, reminders, Chrome extension">
+<link rel="canonical" href="https://harshavarthanep.github.io/Shelf-Shelf/download.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shelf Shelf">
+<meta property="og:title" content="Shelf Shelf — your favourite sites, as real apps">
+<meta property="og:description" content="Apps, folders and a dock for the sites you use every day — plus to-dos with reminders. Free, private, on every device.">
+<meta property="og:url" content="https://harshavarthanep.github.io/Shelf-Shelf/download.html">
+<meta property="og:image" content="https://harshavarthanep.github.io/Shelf-Shelf/media/home.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Shelf Shelf","alternateName":"ShelfShelf","applicationCategory":"ProductivityApplication","operatingSystem":"Chrome, Windows, macOS, Linux, Android, iOS, Web","description":"Your favourite websites as apps, folders and a dock, plus to-dos with reminders.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"H24 Creationz"},"url":"https://harshavarthanep.github.io/Shelf-Shelf/download.html","image":"https://harshavarthanep.github.io/Shelf-Shelf/media/home.jpg"}
+</script>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F2F2F7; --bg2:#E9E9EF; --card:#ffffff; --ink:#1C1C1E; --muted:#636366; --line:#E2E2E8;
+  --accent:#2F7BF5; --accent2:#3F7FF0; --soft:#E8F0FF; --ok:#1f9d63;
+  --shadow:0 30px 70px -28px rgba(40,60,160,.30),0 10px 26px -12px rgba(20,30,90,.14);
+  --grad:linear-gradient(100deg,#409BFE,#4F7BF2 50%,#5D5DE6);
+  --radius:22px;
+}
+@media (prefers-color-scheme:dark){
+  :root{ color-scheme:dark;
+    --bg:#000000; --bg2:#151517; --card:#1C1C1E; --ink:#F5F5F7; --muted:#A1A1A6; --line:#2C2C2E;
+    --accent:#4C95FF; --accent2:#6AA6FF; --soft:#14223D; --ok:#3ccf8e;
+    --shadow:0 30px 70px -28px rgba(0,0,0,.8),0 10px 26px -12px rgba(0,0,0,.55);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+code{font-size:.9em;background:var(--bg2);padding:1px 6px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{font-size:14px;font-weight:650;color:var(--accent2)}
+h1,h2,h3{letter-spacing:-.03em;line-height:1.08;margin:0}
+h2{font-size:clamp(30px,4.4vw,48px)}
+.lead{color:var(--muted);font-size:clamp(17px,1.8vw,20px);max-width:640px}
+section{padding:88px 0}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+.glow{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:-1}
+.glow i{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5}
+.glow i:nth-child(1){width:520px;height:520px;background:#b9d6ff;left:-120px;top:-80px}
+.glow i:nth-child(2){width:480px;height:480px;background:#cfcfff;right:-140px;top:120px}
+@media (prefers-color-scheme:dark){.glow i{opacity:.16}}
+
+header{position:sticky;top:0;z-index:30;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(1.6) blur(16px);-webkit-backdrop-filter:saturate(1.6) blur(16px);border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
+.nav{display:flex;align-items:center;gap:18px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;text-decoration:none;letter-spacing:-.02em}
+.logo svg{width:30px;height:30px;filter:drop-shadow(0 3px 8px rgba(79,123,242,.35))}
+.logo span b{font-weight:800}.logo span i{font-style:normal;font-weight:500;color:var(--muted)}
+.nav nav{display:flex;gap:4px;margin-left:auto}
+.nav nav a{text-decoration:none;color:var(--muted);font-weight:550;font-size:15px;padding:8px 12px;border-radius:10px}
+.nav nav a:hover{color:var(--ink);background:var(--bg2)}
+@media (max-width:860px){.nav nav{display:none}.nav .btn{margin-left:auto}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;cursor:pointer;font:inherit;font-weight:700;text-decoration:none;border-radius:14px;padding:13px 20px;transition:transform .15s,box-shadow .2s,background .2s,opacity .2s;white-space:nowrap}
+.btn:active{transform:scale(.98)}
+.btn:focus-visible,.menu [role=menuitem]:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 14px 30px -12px rgba(79,123,242,.75)}
+.btn-primary:hover{box-shadow:0 18px 38px -12px rgba(79,123,242,.9)}
+.btn-ghost{background:var(--card);color:var(--ink);box-shadow:0 0 0 1px var(--line) inset}
+.btn-ghost:hover{background:var(--bg2)}
+.btn-sm{padding:9px 14px;border-radius:11px;font-size:14px}
+.btn .meta{font-weight:550;opacity:.82;font-size:.86em}
+.btn svg{width:19px;height:19px;flex:none}
+.btn[disabled]{opacity:.5;cursor:not-allowed;box-shadow:none}
+.btn.is-loading{pointer-events:none}
+.spin{display:inline-block;width:17px;height:17px;border-radius:50%;border:2.5px solid currentColor;border-right-color:transparent;animation:spin .7s linear infinite;flex:none;vertical-align:-3px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.skel{display:inline-block;width:54px;height:.9em;border-radius:6px;vertical-align:-1px;background:linear-gradient(90deg,rgba(255,255,255,.15),rgba(255,255,255,.45),rgba(255,255,255,.15));background-size:200% 100%;animation:sh 1.2s infinite}
+.btn-ghost .skel{background:linear-gradient(90deg,var(--line),var(--bg2),var(--line));background-size:200% 100%}
+@keyframes sh{to{background-position:-200% 0}}
+
+/* split button: extension + other browsers */
+.split{position:relative;display:inline-flex;border-radius:14px}
+.split .split-main{border-radius:14px 0 0 14px}
+.split .split-caret{border-radius:0 14px 14px 0;padding:13px 13px;margin-left:1px}
+.split .split-caret svg{width:16px;height:16px;transition:transform .2s}
+.split .split-caret[aria-expanded="true"] svg{transform:rotate(180deg)}
+.split.solo .split-main{border-radius:14px}
+.menu{position:absolute;left:0;top:calc(100% + 8px);z-index:40;width:max-content;min-width:320px;max-width:calc(100vw - 32px);background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:6px;animation:pop .18s ease-out}
+.menu.up{top:auto;bottom:calc(100% + 8px)}
+@keyframes pop{from{opacity:0;transform:translateY(-4px)}}
+.menu .mh{font-size:12.5px;color:var(--muted);padding:8px 12px 4px;font-weight:600}
+.menu [role=menuitem]{display:flex;align-items:center;gap:12px;width:100%;text-align:left;border:0;background:none;font:inherit;color:var(--ink);text-decoration:none;padding:10px 12px;border-radius:11px;cursor:pointer}
+.menu [role=menuitem]:hover:not([aria-disabled=true]),.menu [role=menuitem]:focus-visible{background:var(--bg2)}
+.menu [role=menuitem][aria-disabled=true]{cursor:not-allowed;opacity:.55}
+.menu .bi{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;background:var(--soft);color:var(--accent);flex:none;font-weight:800;font-size:14px}
+.menu .bt{flex:1;line-height:1.3;white-space:nowrap}.menu .bt b{display:block;font-size:15px}.menu .bt small{color:var(--muted);font-size:13px}
+.chip{font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:999px;background:var(--bg2);color:var(--muted);white-space:nowrap}
+.chip.live{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
+.chip.here{background:var(--soft);color:var(--accent)}
+.ext-note{font-size:14px;color:var(--muted);margin:10px 0 0;max-width:560px}
+
+.hero{position:relative;padding:72px 0 40px;isolation:isolate}
+.hero-grid{display:grid;grid-template-columns:1fr 1.12fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(42px,6.2vw,72px);margin:14px 0 18px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 8px;align-items:flex-start}
+.hero-meta{color:var(--muted);font-size:14px;margin-top:14px}
+.hero-meta a{color:var(--accent2);font-weight:600;text-decoration:none}
+.devices{position:relative;padding:0 40px 50px 0}
+.win{border-radius:14px;overflow:hidden;background:var(--card);box-shadow:var(--shadow),0 0 0 1px var(--line)}
+.win .bar{display:flex;align-items:center;gap:8px;height:32px;padding:0 12px;background:var(--bg2);font-size:12px;font-weight:600;color:var(--muted)}
+.win .bar svg{width:15px;height:15px}
+.win .bar span:last-child{margin-left:auto;letter-spacing:12px;opacity:.6}
+.phone{position:absolute;right:0;bottom:0;width:27%;min-width:120px;border-radius:30px;background:#111;padding:7px;box-shadow:var(--shadow)}
+.phone img{border-radius:24px}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.devices{max-width:620px}}
+
+.platforms{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;color:var(--muted);font-weight:600;font-size:15px;padding:26px 22px 0}
+.platforms span{display:flex;align-items:center;gap:8px}
+.platforms svg{width:18px;height:18px}
+.platforms .sep{width:1px;height:18px;background:var(--line)}
+
+.video{margin-top:38px;border-radius:22px;overflow:hidden;box-shadow:var(--shadow),0 0 0 1px var(--line);background:#000;aspect-ratio:16/9}
+.video video{width:100%;height:100%;display:block;object-fit:cover}
+.video.vert{aspect-ratio:9/16;max-width:420px;margin-left:auto;margin-right:auto}
+.vtabs{display:flex;gap:8px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.vtabs button{font:inherit;font-size:14px;font-weight:650;color:var(--muted);background:var(--card);border:0;box-shadow:0 0 0 1px var(--line) inset;border-radius:999px;padding:8px 16px;cursor:pointer}
+.vtabs button[aria-pressed="true"]{color:#fff;background:var(--accent);box-shadow:none}
+
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.why .card h3{font-size:19px;margin:14px 0 8px;letter-spacing:-.02em}
+.why .card p{margin:0;color:var(--muted);font-size:15px;line-height:1.55}
+.ico{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--soft);color:var(--accent);flex:none}
+.ico svg{width:22px;height:22px}
+@media (max-width:1000px){.why{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.why{grid-template-columns:1fr}}
+
+.feature{display:grid;grid-template-columns:1fr 1.25fr;gap:56px;align-items:center;margin-top:72px}
+.feature.flip .ftext{order:2}
+.feature h3{font-size:clamp(26px,3.2vw,36px);margin:10px 0 12px}
+.feature p{color:var(--muted);margin:0 0 14px}
+.feature ul{margin:0;padding:0;list-style:none}
+.feature li{padding:6px 0 6px 28px;position:relative}
+.feature li::before{content:"";position:absolute;left:4px;top:14px;width:10px;height:10px;border-radius:3px;background:var(--grad)}
+.shot{position:relative}
+.shot .phone{width:24%;right:-14px;bottom:-26px}
+@media (max-width:900px){.feature{grid-template-columns:1fr;gap:26px}.feature.flip .ftext{order:0}.shot .phone{right:4px}}
+
+/* extension section */
+.ext{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;margin-top:38px;align-items:stretch}
+.ext-main{position:relative;overflow:visible;padding:30px}
+.ext-main .top{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.ext-main h3{font-size:26px}
+.ext-main .req{color:var(--muted);margin:6px 0 22px}
+.ext-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.ext-list li{display:flex;gap:12px;align-items:flex-start}
+.ext-list li b{display:block}
+.ext-list li span{color:var(--muted);font-size:15px}
+.store-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+@media (max-width:900px){.ext{grid-template-columns:1fr}}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.stat{text-align:center;padding:26px 16px}
+.stat b{display:block;font-size:clamp(30px,4vw,44px);letter-spacing:-.03em;line-height:1}
+.stat span{color:var(--muted);font-size:14.5px;font-weight:550}
+@media (max-width:800px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+.dl-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px}
+.release{font-size:14px;color:var(--muted);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 14px;display:flex;gap:8px;align-items:center}
+.release b{color:var(--ink)}
+.release a{color:var(--accent2);font-weight:600}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);flex:none}
+.dot.wait{background:#ff9f0a}
+.dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:34px}
+.os{display:flex;flex-direction:column;gap:12px;position:relative}
+.os.mine{border-color:var(--accent);box-shadow:0 0 0 3px var(--soft)}
+.os .tag{position:absolute;top:16px;right:16px;font-size:12px;font-weight:700;color:var(--accent);background:var(--soft);padding:3px 10px;border-radius:999px;display:none}
+.os.mine .tag{display:block}
+.os .top{display:flex;align-items:center;gap:12px}
+.os h3{font-size:21px}
+.req{font-size:14px;color:var(--muted);margin:0}
+.os .btns{display:flex;flex-direction:column;gap:8px;margin-top:auto}
+.os .btns .btn{width:100%;white-space:normal;text-align:center}
+.os details{font-size:14px;color:var(--muted)}
+.os summary{cursor:pointer;font-weight:600;color:var(--ink)}
+.os ol{margin:8px 0 0;padding-left:20px}
+@media (max-width:1000px){.dl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.dl{grid-template-columns:minmax(0,1fr)}}
+
+.faq{max-width:820px;margin:40px auto 0}
+.faq details{border-bottom:1px solid var(--line);padding:18px 4px}
+.faq summary{cursor:pointer;font-weight:700;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;color:var(--accent);line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq p{color:var(--muted);margin:10px 0 0}
+
+.final{text-align:center;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:56px 24px;position:relative;isolation:isolate}
+.final .glow{border-radius:28px}
+footer{padding:36px 0 calc(40px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 20px;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
+footer a{color:var(--muted)}
+
+.sheet-bg{position:fixed;inset:0;background:rgba(10,15,35,.45);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);z-index:50;display:none;align-items:flex-end;justify-content:center;padding:16px}
+.sheet-bg.open{display:flex}
+@media (min-width:640px){.sheet-bg{align-items:center}}
+.sheet{width:min(520px,100%);background:var(--card);border-radius:24px;padding:26px;box-shadow:var(--shadow);border:1px solid var(--line);animation:up .28s cubic-bezier(.2,.8,.2,1);margin-bottom:env(safe-area-inset-bottom,0px)}
+@keyframes up{from{transform:translateY(24px);opacity:0}}
+.sheet h3{font-size:22px;margin:12px 0 4px}
+.sheet .file{display:flex;align-items:center;gap:12px;background:var(--bg2);border-radius:14px;padding:12px 14px;margin:14px 0 16px;font-size:14px}
+.sheet .file b{display:block;color:var(--ink);font-size:15px;word-break:break-all}
+.sheet .state{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px}
+.sheet ol{color:var(--muted);padding-left:20px;margin:6px 0 18px;font-size:15px}
+.sheet .row{display:flex;gap:10px;flex-wrap:wrap}
+.sheet .row .btn{flex:1}
+.check{width:22px;height:22px;border-radius:50%;background:var(--ok);display:grid;place-items:center;color:#fff;font-size:13px;flex:none}
+.small{font-size:13px;color:var(--muted)}
+.small a{color:var(--accent2)}
+.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:#1c1c1e;color:#fff;padding:12px 16px;border-radius:14px;font-size:14px;font-weight:550;z-index:60;box-shadow:0 10px 30px rgba(0,0,0,.3);max-width:90vw}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#409BFE"/><stop offset="1" stop-color="#5D5DE6"/></linearGradient>
+  <symbol id="slogo" viewBox="0 0 512 512"><rect width="512" height="512" rx="114" fill="url(#sg)"/><rect x="120" y="120" width="112" height="112" rx="30" fill="#fff"/><rect x="280" y="120" width="112" height="112" rx="30" fill="#fff"/><rect x="120" y="280" width="112" height="112" rx="30" fill="#fff"/><rect x="280" y="280" width="112" height="112" rx="30" fill="#fff"/></symbol>
+  <symbol id="ipuzzle" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M9 4.5a2 2 0 1 1 4 0V6h3.5A1.5 1.5 0 0 1 18 7.5V11h1.5a2 2 0 1 1 0 4H18v3.5a1.5 1.5 0 0 1-1.5 1.5H13v-1.5a2 2 0 1 0-4 0V20H5.5A1.5 1.5 0 0 1 4 18.5V15h1.5a2 2 0 1 0 0-4H4V7.5A1.5 1.5 0 0 1 5.5 6H9z"/></symbol>
+  <symbol id="ichev" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="ilink" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
+</defs></svg>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><svg aria-hidden="true"><use href="#slogo"/></svg><span><b>Shelf</b> <i>Shelf</i></span></a>
+    <nav aria-label="Sections">
+      <a href="#why">Why Shelf Shelf</a><a href="#features">Features</a><a href="#extension">Extension</a><a href="#download">Apps</a><a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-ghost btn-sm" data-try href="./">Open the web app</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="glow"><i></i><i></i></div>
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">App launcher · Dock · To-dos</div>
+        <h1>Your favourite sites, <span class="grad">as real apps.</span></h1>
+        <p class="lead">Shelf Shelf puts the websites you use every day on a home screen of their own — with folders, a dock and search. Add to-dos in plain words and get reminded on time. Free, private and on every device.</p>
+        <div class="cta" id="hero-cta"></div>
+        <p class="ext-note" id="hero-note" hidden></p>
+        <div class="hero-meta">Free · No account · Your data stays on your device · <a href="#extension">All browsers</a> · <a href="#download">All apps</a></div>
+      </div>
+      <div class="devices">
+        <div class="win">
+          <div class="bar"><svg aria-hidden="true"><use href="#slogo"/></svg>Shelf Shelf<span>–▢✕</span></div>
+          <img src="media/home.jpg" width="1600" height="1000" alt="Shelf Shelf home screen with apps, folders, the clock and a dock">
+        </div>
+        <div class="phone"><img src="media/m-home.jpg" width="600" height="1299" alt="Shelf Shelf on a phone"></div>
+      </div>
+    </div>
+    <div class="platforms" aria-label="Available on">
+      <span><svg viewBox="0 0 24 24"><use href="#ipuzzle"/></svg>Chrome extension</span>
+      <span class="sep" aria-hidden="true"></span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10.5 4.4v7.1H3zm0 13 7.5 1.1v-7H3zM11.5 4.3 21 3v8.5h-9.5zm0 15.4L21 21v-8.4h-9.5z"/></svg>Windows</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg>macOS</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M12 15h5"/></svg>Linux</span>
+      <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 9h12v8a2 2 0 0 1-2 2h-1v3h-2v-3h-2v3H9v-3H8a2 2 0 0 1-2-2zm-3 0h2v7H3zm16 0h2v7h-2zM7.5 8a4.5 4.5 0 0 1 9 0z"/></svg>Android</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>iPhone &amp; iPad</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Web</span>
+    </div>
+  </section>
+
+  <!-- Demo videos: upload them to media/ with these names and this section appears by itself. -->
+  <section id="demo" style="padding-top:40px" hidden>
+    <div class="wrap center">
+      <div class="eyebrow">See it in action</div>
+      <h2 style="margin-top:12px">Shelf Shelf in <span class="grad">30 seconds.</span></h2>
+      <div class="video" id="video"><video id="demo-video" muted loop playsinline controls preload="metadata"></video></div>
+      <div class="vtabs" id="vtabs" role="group" aria-label="Choose a video"></div>
+    </div>
+  </section>
+
+  <section id="why" style="padding-top:30px">
+    <div class="wrap center">
+      <div class="eyebrow">Why Shelf Shelf</div>
+      <h2 style="margin:12px 0 14px">Stop hunting through tabs<br><span class="grad">and bookmarks.</span></h2>
+      <p class="lead">Your mail, calendar, bank and tools — one tap away, arranged the way you think. Like your phone’s home screen, for the web.</p>
+    </div>
+    <div class="wrap why">
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.8"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.8"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.8"/></svg></div><h3>Sites become apps</h3><p>Paste a link — the name and logo fill in by themselves.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3.5 7a2 2 0 0 1 2-2h4l2 2.2h7a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/></svg></div><h3>Folders and a dock</h3><p>Drop one app on another to make a folder. Keep favourites in the dock.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7l2 2 4-4M4 16l2 2 4-4M13 7h7M13 16h7"/></svg></div><h3>To-dos with reminders</h3><p>Type “Call Sam 5pm” — Shelf Shelf sets the reminder for you.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div><h3>Private by design</h3><p>No account, no tracking, no ads. Everything stays on your device.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4-4"/></svg></div><h3>Find anything fast</h3><p>Start typing to open an app — or search the web from the same box.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 0 0 17z" fill="currentColor"/></svg></div><h3>Looks your way</h3><p>Light, dark, Liquid Glass, seven themes, wallpapers or your own photo.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 12a8 8 0 1 0 2.4-5.7L4 8.6"/><path d="M4 4v4.6h4.6M12 8v4l3 2"/></svg></div><h3>Never lose a thing</h3><p>Ten automatic versions, plus a backup file that moves between devices.</p></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4" width="13" height="10" rx="1.6"/><rect x="15" y="9" width="6.5" height="11" rx="1.6"/><path d="M6 18h6"/></svg></div><h3>Every device</h3><p>A browser extension, desktop and Android apps, and the web.</p></div>
+    </div>
+  </section>
+
+  <section id="features" style="padding-top:20px">
+    <div class="wrap">
+      <div class="feature rv">
+        <div class="ftext">
+          <div class="eyebrow">Your home screen</div>
+          <h3>Everything you open daily, <span class="grad">in one place.</span></h3>
+          <p>A calm home screen with a big clock, your apps and a dock — the first thing you see in a new tab, on your desktop or on your phone.</p>
+          <ul><li>Icons or a tidy list, vertical or horizontal</li><li>Sort by hand, by name or by how often you use them</li><li>Add the page you’re on from the right-click menu</li></ul>
+        </div>
+        <div class="shot"><div class="win"><div class="bar"><svg aria-hidden="true"><use href="#slogo"/></svg>Shelf Shelf<span>–▢✕</span></div><img src="media/home.jpg" width="1600" height="1000" loading="lazy" alt="Shelf Shelf home screen"></div></div>
+      </div>
+
+      <div class="feature flip rv">
+        <div class="ftext">
+          <div class="eyebrow">Folders</div>
+          <h3>Group it like <span class="grad">your phone.</span></h3>
+          <p>Drop one app on another to make a folder — Work, Bills, Study, anything. Auto-Organize can sort a long shelf into folders for you.</p>
+          <ul><li>Open a whole folder of sites in one tap</li><li>Save all open tabs as a folder (extension)</li><li>Import your bookmarks in seconds</li></ul>
+        </div>
+        <div class="shot"><div class="win"><div class="bar"><svg aria-hidden="true"><use href="#slogo"/></svg>Work<span>–▢✕</span></div><img src="media/folder.jpg" width="1600" height="1000" loading="lazy" alt="A folder of work apps open in Shelf Shelf"></div></div>
+      </div>
+
+      <div class="feature rv">
+        <div class="ftext">
+          <div class="eyebrow">To-dos and reminders</div>
+          <h3>Write it the way <span class="grad">you say it.</span></h3>
+          <p>“Pay rent tomorrow 9am !” becomes a to-do with a reminder and a priority. Lists show up as coloured dots on your home screen.</p>
+          <ul><li>Today view for everything that’s due</li><li>Snooze and Done right from the notification</li><li>Reminders even when the browser is closed, with the extension and the apps</li></ul>
+        </div>
+        <div class="shot"><div class="win"><div class="bar"><svg aria-hidden="true"><use href="#slogo"/></svg>To-Do<span>–▢✕</span></div><img src="media/todo.jpg" width="1600" height="1000" loading="lazy" alt="To-do list with reminders in Shelf Shelf"></div><div class="phone"><img src="media/m-todo.jpg" width="600" height="1299" loading="lazy" alt="To-dos on a phone"></div></div>
+      </div>
+
+      <div class="feature flip rv">
+        <div class="ftext">
+          <div class="eyebrow">Make it yours</div>
+          <h3>Light, dark or <span class="grad">Liquid Glass.</span></h3>
+          <p>Pick a theme, an accent colour, a wallpaper or your own photo. Change icon size and shape, and how many apps fit in a row.</p>
+          <ul><li>Seven themes plus custom colours</li><li>Follows your device’s light or dark setting</li><li>Every look works on phone, tablet and desktop</li></ul>
+        </div>
+        <div class="shot"><div class="win"><div class="bar" style="background:#1c1c1e;color:#a1a1a6"><svg aria-hidden="true"><use href="#slogo"/></svg>Shelf Shelf<span>–▢✕</span></div><img src="media/dark.jpg" width="1600" height="1000" loading="lazy" alt="Shelf Shelf in dark mode with Liquid Glass"></div><div class="phone"><img src="media/m-dark.jpg" width="600" height="1299" loading="lazy" alt="Liquid Glass on a phone"></div></div>
+      </div>
+
+      <div class="feature rv">
+        <div class="ftext">
+          <div class="eyebrow">Settings you’ll understand</div>
+          <h3>Simple on the surface, <span class="grad">deep when you want.</span></h3>
+          <p>Clear switches for everything — backups, restore, sync between your computers, keyboard shortcuts and the welcome tour.</p>
+          <ul><li>Export a backup and import it anywhere</li><li>Restore any of your last ten versions</li><li>Sync across computers through your browser account (extension)</li></ul>
+        </div>
+        <div class="shot"><div class="win"><div class="bar"><svg aria-hidden="true"><use href="#slogo"/></svg>Settings<span>–▢✕</span></div><img src="media/settings.jpg" width="1600" height="1000" loading="lazy" alt="Shelf Shelf settings"></div></div>
+      </div>
+
+      <div class="stats rv">
+        <div class="card stat"><b class="grad">Free</b><span>core features, forever</span></div>
+        <div class="card stat"><b class="grad">0</b><span>trackers or ads</span></div>
+        <div class="card stat"><b class="grad">7</b><span>ways to use it</span></div>
+        <div class="card stat"><b class="grad">100%</b><span>works offline</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="extension">
+    <div class="wrap">
+      <div class="dl-head">
+        <div><div class="eyebrow">Browser extension</div><h2 style="margin-top:12px">Shelf Shelf in <span class="grad">every new tab.</span></h2></div>
+        <div class="release"><span class="dot"></span> Live on the <b>Chrome Web Store</b></div>
+      </div>
+      <div class="ext">
+        <div class="card ext-main">
+          <div class="top"><div class="ico"><svg viewBox="0 0 24 24"><use href="#ipuzzle"/></svg></div><h3 id="ext-title">Shelf Shelf for your browser</h3></div>
+          <p class="req" id="ext-req">Free · Works in Chrome, Edge, Brave, Vivaldi, Opera and Arc</p>
+          <div id="ext-cta"></div>
+          <p class="ext-note" id="ext-note" hidden></p>
+          <div class="store-row" id="store-row" aria-label="Store status"></div>
+        </div>
+        <div class="card">
+          <ul class="ext-list">
+            <li><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 9h18"/></svg></div><div><b>Your Shelf in every new tab</b><span>Or keep your browser’s new tab and open Shelf from the toolbar.</span></div></li>
+            <li><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div><div><b>Add the page you’re on</b><span>One click in the toolbar, or right-click → Add Page to Shelf.</span></div></li>
+            <li><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 8 3 8H3s3-1 3-8M10 20a2 2 0 0 0 4 0"/></svg></div><div><b>Reminders, even when it’s closed</b><span>Your to-dos ring on time with Snooze and Done.</span></div></li>
+            <li><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M17 3l4 4-4 4M21 7H8a4 4 0 0 0-4 4M7 21l-4-4 4-4M3 17h13a4 4 0 0 0 4-4"/></svg></div><div><b>Sync across your computers</b><span>Through your own browser account — Shelf Shelf never sees it.</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" style="padding-top:20px">
+    <div class="wrap">
+      <div class="dl-head">
+        <div><div class="eyebrow">Apps</div><h2 style="margin-top:12px">Get Shelf Shelf <span class="grad">on every device.</span></h2></div>
+        <div class="release" id="release"><span class="spin" style="width:13px;height:13px;border-width:2px"></span> Checking the latest version…</div>
+      </div>
+      <div class="dl" id="dl-grid"></div>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top:20px">
+    <div class="wrap center"><div class="eyebrow">FAQ</div><h2 style="margin-top:12px">Questions, <span class="grad">answered.</span></h2></div>
+    <div class="wrap faq">
+      <details><summary>Is Shelf Shelf free?</summary><p>Yes. Everything you see on this page is free, with no ads and no account. If an optional Pro plan is ever offered, the core features stay free forever.</p></details>
+      <details><summary>Extension, app or website — which should I use?</summary><p>On a computer, the <b>extension</b> is the best fit: Shelf in every new tab, add the page you’re on, and reminders even when the browser is closed. The <b>desktop app</b> gives Shelf its own window and opens your sites in your default browser. On a phone, use the <b>Android app</b> or add the web app to your home screen.</p></details>
+      <details><summary>Which browsers does the extension work in?</summary><p>It’s on the Chrome Web Store, so it works in Chrome, Edge, Brave, Vivaldi, Opera and Arc. Firefox and Safari versions are on the way — the menu next to the Add button shows each store as it goes live.</p></details>
+      <details><summary>Where are my apps and to-dos stored?</summary><p>On your own device. The extension can also keep a copy in your browser account (Chrome Sync and similar) if you turn on Sync. Nothing is ever sent to us. Read the <a href="privacy.html">privacy policy</a>.</p></details>
+      <details><summary>Can I move my Shelf between the extension, the apps and the website?</summary><p>Yes. In Settings choose <b>Export Backup</b>, then <b>Import Backup</b> on the other device. The same file works everywhere.</p></details>
+      <details><summary>Windows or macOS says the app is from an unknown developer. Is it safe?</summary><p>Yes — that message appears for new apps without a paid signing certificate. On Windows choose <b>More info → Run anyway</b>; on macOS open <b>System Settings → Privacy &amp; Security</b> and click <b>Open Anyway</b>. You only do this once.</p></details>
+      <details><summary>Why is there no App Store download for iPhone?</summary><p>Apple only allows App Store installs. On iPhone and iPad, open Shelf Shelf in Safari and choose <b>Share → Add to Home Screen</b> — it opens full-screen and works offline.</p></details>
+      <details><summary>I need help or found a bug.</summary><p>Visit <a href="support.html">Help &amp; Support</a> or email <a href="mailto:h24creationz@gmail.com">h24creationz@gmail.com</a>. We reply within two working days.</p></details>
+    </div>
+  </section>
+
+  <section style="padding-top:10px">
+    <div class="wrap">
+      <div class="final rv">
+        <div class="glow"><i></i><i></i></div>
+        <h2>Give your favourite sites <span class="grad">a home.</span></h2>
+        <p class="lead" style="margin:14px auto 26px">Free, private and ready on every device.</p>
+        <div class="cta" id="final-cta" style="justify-content:center;margin:0"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Shelf Shelf · Built by H24 Creationz</span>
+    <nav aria-label="Legal and help">
+      <a href="support.html">Help &amp; Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="refunds.html">Refunds</a><a href="contact.html">Contact</a><a href="#" id="all-rel">All releases</a><a data-try href="./">Web app</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="sheet-bg" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+  <div class="sheet">
+    <div class="state" id="sheet-state"><span class="spin"></span>Preparing your download…</div>
+    <h3 id="sheet-title">Shelf Shelf</h3>
+    <div class="file"><svg width="34" height="34" aria-hidden="true"><use href="#slogo"/></svg><div><b id="sheet-file"></b><span id="sheet-size"></span></div></div>
+    <ol id="sheet-steps"></ol>
+    <div class="row"><button class="btn btn-ghost" id="sheet-close" type="button">Done</button><a class="btn btn-primary" id="sheet-retry" href="#">Download again</a></div>
+    <p class="small" style="margin:14px 0 0">Need another device? <a href="#download" id="sheet-other">See all downloads</a></p>
+  </div>
+</div>
+
+<script>
+(function () {
+  /* =====================================================================
+     BROWSER STORES — paste each store link here when the extension goes
+     live there. A browser with a link becomes clickable everywhere on this
+     page (and is picked automatically for visitors using that browser).
+     Leave '' for "Coming soon".
+     ===================================================================== */
+  var STORES = [
+    { id: 'chrome',  name: 'Chrome',  store: 'Chrome Web Store',       url: 'https://chromewebstore.google.com/detail/shelf-shelf-%E2%80%94-app-launche/bhhnembgfddoomakgmegbhkpklcgelhn' },
+    { id: 'edge',    name: 'Edge',    store: 'Microsoft Edge Add-ons', url: '' },
+    { id: 'firefox', name: 'Firefox', store: 'Firefox Add-ons',        url: '' },
+    { id: 'safari',  name: 'Safari',  store: 'Mac App Store',          url: '' },
+    { id: 'opera',   name: 'Opera',   store: 'Opera add-ons',          url: '' }
+  ];
+  /* ===================================================================== */
+
+  var host = location.hostname, seg = location.pathname.split('/').filter(Boolean), gh = /\.github\.io$/.test(host);
+  var REPO = (gh ? host.split('.')[0] : 'harshavarthanep') + '/' + (gh && seg.length && !/\.html?$/.test(seg[0]) ? seg[0] : 'Shelf-Shelf');
+  var TRY_URL = './';
+  var LATEST = 'https://github.com/' + REPO + '/releases/latest/download/';
+  document.getElementById('all-rel').href = 'https://github.com/' + REPO + '/releases';
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  function toast(msg) { var t = document.createElement('div'); t.className = 'toast'; t.setAttribute('role', 'status'); t.textContent = msg; document.body.appendChild(t); setTimeout(function () { t.remove(); }, 3200); }
+
+  /* ---------- which browser and device is the visitor on? ---------- */
+  var ua = navigator.userAgent;
+  var uad = navigator.userAgentData;
+  var brands = uad && uad.brands ? uad.brands.map(function (b) { return b.brand; }).join(' ') : '';
+  var plat = (uad && uad.platform) || navigator.platform || '';
+  var isIOS = /iPad|iPhone|iPod/.test(ua) || (/Mac/.test(plat) && navigator.maxTouchPoints > 1);
+  var isMobile = isIOS || /Android/i.test(ua) || !!(uad && uad.mobile);
+  var B = /Edg(e|A|iOS)?\//.test(ua) || /Microsoft Edge/.test(brands) ? 'edge'
+    : /OPR\/|OPT\/|Opera/.test(ua) || /Opera/.test(brands) ? 'opera'
+    : /Firefox\/|FxiOS/.test(ua) ? 'firefox'
+    : /SamsungBrowser/.test(ua) ? 'samsung'
+    : /Vivaldi/.test(ua) ? 'vivaldi'
+    : navigator.brave ? 'brave'
+    : /Chrome\/|CriOS|Chromium/.test(ua) ? 'chrome'
+    : /Safari\//.test(ua) ? 'safari'
+    : /Chromium/.test(brands) ? 'chrome' : 'other';
+  var NAMES = { chrome: 'Chrome', edge: 'Edge', firefox: 'Firefox', safari: 'Safari', opera: 'Opera', brave: 'Brave', vivaldi: 'Vivaldi', samsung: 'Samsung Internet', other: 'your browser' };
+  var CHROMIUM = { chrome: 1, edge: 1, opera: 1, brave: 1, vivaldi: 1 };
+  var byId = {}; STORES.forEach(function (s) { byId[s.id] = s; });
+
+  function extPlan() {
+    if (isMobile) return { kind: 'mobile' };
+    var own = byId[B];
+    if (own && own.url) return { kind: 'store', url: own.url, label: 'Add to ' + own.name, store: own.store };
+    if (CHROMIUM[B] && byId.chrome.url) {
+      var note = B === 'edge' ? 'Edge adds it from the Chrome Web Store — when Edge asks, choose “Allow extensions from other stores”, then “Add to Chrome”.'
+        : B === 'opera' ? 'In Opera, first add Opera’s free “Install Chrome Extensions” add-on, then click “Add to Chrome” on the next page.'
+        : B === 'chrome' ? '' : NAMES[B] + ' installs Chrome extensions straight from the Chrome Web Store.';
+      return { kind: 'store', url: byId.chrome.url, label: 'Add to ' + NAMES[B], store: 'Chrome Web Store', note: note };
+    }
+    return { kind: 'soon', label: 'Coming soon to ' + NAMES[B] };
+  }
+  var EXT = extPlan();
+
+  function menuHTML() {
+    var any = STORES.filter(function (s) { return s.url; }).length;
+    return '<div class="menu" role="menu" hidden><div class="mh">Get Shelf Shelf for another browser</div>' + STORES.map(function (s) {
+      var here = s.id === B, live = !!s.url;
+      var inner = '<span class="bi" aria-hidden="true">' + s.name.charAt(0) + '</span><span class="bt"><b>' + esc(s.name) + '</b><small>' + esc(s.store) + '</small></span>' +
+        (here ? '<span class="chip here">This browser</span>' : '') + '<span class="chip' + (live ? ' live' : '') + '">' + (live ? 'Available' : 'Coming soon') + '</span>';
+      return live
+        ? '<a role="menuitem" href="' + esc(s.url) + '" target="_blank" rel="noopener">' + inner + '</a>'
+        : '<button role="menuitem" type="button" aria-disabled="true" tabindex="-1" title="Coming soon">' + inner + '</button>';
+    }).join('') + (any ? '' : '') + '</div>';
+  }
+  function extHTML() {
+    var main;
+    if (EXT.kind === 'store') main = '<a class="btn btn-primary split-main" href="' + esc(EXT.url) + '" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#ipuzzle"/></svg><span class="lbl">' + esc(EXT.label) + '</span> <span class="meta">Free</span></a>';
+    else if (EXT.kind === 'mobile') main = '<button class="btn btn-primary split-main" type="button" data-copy><svg viewBox="0 0 24 24"><use href="#ilink"/></svg><span class="lbl">Copy link for your computer</span></button>';
+    else main = '<button class="btn btn-primary split-main" type="button" disabled><svg viewBox="0 0 24 24"><use href="#ipuzzle"/></svg><span class="lbl">' + esc(EXT.label) + '</span></button>';
+    return '<div class="split">' + main + '<button class="btn btn-primary split-caret" type="button" aria-haspopup="menu" aria-expanded="false" aria-label="Other browsers"><svg viewBox="0 0 24 24"><use href="#ichev"/></svg></button>' + menuHTML() + '</div>';
+  }
+  function extNote() {
+    if (EXT.kind === 'mobile') return 'Browser extensions are for computers. Copy this page’s link and open it there — or get the phone app below.';
+    if (EXT.kind === 'soon') return 'The ' + NAMES[B] + ' version is on the way. Meanwhile, use the web app or the desktop app — your backup moves over when it’s ready.';
+    return EXT.note || '';
+  }
+
+  /* ---------- apps (from the latest GitHub Release) ---------- */
+  var P = {
+    windows: { name: 'Windows', icon: 'win', req: 'Windows 10 or later · 64-bit, Intel &amp; AMD',
+      files: [{ label: 'Download installer', asset: 'ShelfShelf-Setup-x64.exe' }, { label: 'Portable — no install', asset: 'ShelfShelf-Portable.exe' }, { label: 'Windows on ARM', asset: 'ShelfShelf-Setup-arm64.exe' }],
+      steps: ['Open <b>ShelfShelf-Setup-x64.exe</b> from your Downloads.', 'If Windows shows “Windows protected your PC”, click <b>More info → Run anyway</b>.', 'Shelf Shelf opens and appears in the Start menu.'] },
+    mac: { name: 'macOS', icon: 'mac', req: 'macOS 11 Big Sur or later · Apple silicon &amp; Intel',
+      files: [{ label: 'Download for Mac', asset: 'ShelfShelf-Mac.dmg' }],
+      steps: ['Open <b>ShelfShelf-Mac.dmg</b> and drag Shelf Shelf into <b>Applications</b>.', 'Open Shelf Shelf from Applications.', 'If macOS can’t check the developer, open <b>System Settings → Privacy &amp; Security</b> and click <b>Open Anyway</b>. You only do this once.'] },
+    linux: { name: 'Linux', icon: 'linux', req: '64-bit · Ubuntu 18.04, Debian 10, Fedora 32 or later',
+      files: [{ label: 'Download .deb — Ubuntu / Debian', asset: 'ShelfShelf-Linux.deb' }, { label: 'Download AppImage', asset: 'ShelfShelf-Linux.AppImage' }],
+      steps: ['<b>.deb:</b> double-click to install, or run <code>sudo apt install ./ShelfShelf-Linux.deb</code>.', '<b>AppImage:</b> right-click → Properties → allow it to run as a program, then double-click it.', 'Find Shelf Shelf in your app menu.'] },
+    android: { name: 'Android', icon: 'android', req: 'Android 7.0 or later',
+      files: [{ label: 'Download APK', asset: 'ShelfShelf-Android.apk' }],
+      steps: ['Open <b>ShelfShelf-Android.apk</b> from your notifications or Downloads.', 'If asked, allow your browser to <b>install unknown apps</b>.', 'Tap <b>Install</b>, then open Shelf Shelf. Allow notifications to get your reminders.'] },
+    ios: { name: 'iPhone & iPad', icon: 'ios', req: 'iOS &amp; iPadOS 15 or later · Safari', web: true,
+      steps: ['Open Shelf Shelf in <b>Safari</b>.', 'Tap the <b>Share</b> button.', 'Tap <b>Add to Home Screen</b> — Shelf Shelf now opens full-screen and works offline.'] },
+    web: { name: 'Web', icon: 'web', req: 'Any current browser — nothing to install', web: true,
+      steps: ['Open the web app.', 'In Chrome or Edge you can also <b>install</b> it from the address bar to get its own window.'] }
+  };
+  var ICONS = {
+    win: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5 10.5 4.4v7.1H3zm0 13 7.5 1.1v-7H3zM11.5 4.3 21 3v8.5h-9.5zm0 15.4L21 21v-8.4h-9.5z"/></svg>',
+    mac: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg>',
+    linux: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M12 15h5"/></svg>',
+    android: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 9h12v8a2 2 0 0 1-2 2h-1v3h-2v-3h-2v3H9v-3H8a2 2 0 0 1-2-2zm-3 0h2v7H3zm16 0h2v7h-2zM7.5 8a4.5 4.5 0 0 1 9 0z"/></svg>',
+    ios: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>',
+    web: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>'
+  };
+  var mine = /android/i.test(ua) ? 'android' : isIOS ? 'ios'
+    : (/Win/i.test(plat) || /Windows/i.test(ua)) ? 'windows'
+    : (/Mac/i.test(plat) || /Macintosh/.test(ua)) ? 'mac'
+    : /Linux|X11|CrOS/i.test(plat + ' ' + ua) ? 'linux' : 'web';
+  var armWin = mine === 'windows' && /arm/i.test(ua);
+
+  // release: null = still checking · {assets:[]} = no release yet · failed = GitHub didn't answer (links still work)
+  var release = null, releaseFailed = false;
+  function fmtSize(b) { return b >= 1e6 ? Math.round(b / 1e6) + ' MB' : Math.max(1, Math.round(b / 1e3)) + ' KB'; }
+  function asset(name) {
+    if (!release) return releaseFailed ? { url: LATEST + name, size: null, ok: true } : null;
+    var a = (release.assets || []).filter(function (x) { return x.name === name; })[0];
+    return a ? { url: a.browser_download_url, size: a.size, ok: true } : { ok: false };
+  }
+  function metaFor(a) { return !a ? '<span class="skel"></span>' : (a.ok ? (a.size ? fmtSize(a.size) : '') : 'Coming soon'); }
+
+  var order = ['windows', 'mac', 'linux', 'android', 'ios', 'web'];
+  order.sort(function (a, b) { return (b === mine) - (a === mine); });
+
+  function renderCards() {
+    $('dl-grid').innerHTML = order.map(function (id) {
+      var p = P[id];
+      var btns = p.web
+        ? '<a class="btn btn-primary" data-try href="' + TRY_URL + '">' + (id === 'ios' ? 'Open in Safari' : 'Open the web app') + '</a>'
+        : p.files.map(function (f, i) {
+            var a = asset(f.asset);
+            return '<button type="button" class="btn ' + (i ? 'btn-ghost' : 'btn-primary') + '" data-platform="' + id + '" data-asset="' + i + '"' + (a && !a.ok ? ' disabled' : '') + '>' +
+              '<span class="lbl">' + f.label + '</span> <span class="meta">' + metaFor(a) + '</span></button>';
+          }).join('');
+      return '<div class="card os' + (id === mine ? ' mine' : '') + '" id="os-' + id + '">' +
+        '<span class="tag">Your device</span>' +
+        '<div class="top"><div class="ico">' + ICONS[p.icon] + '</div><h3>' + p.name + '</h3></div>' +
+        '<p class="req">' + p.req + '</p>' +
+        '<div class="btns">' + btns + '</div>' +
+        '<details><summary>How to install</summary><ol>' + p.steps.map(function (s) { return '<li>' + s + '</li>'; }).join('') + '</ol></details>' +
+        '</div>';
+    }).join('');
+  }
+  function appButton(cls) {
+    var p = P[mine], idx = armWin ? 2 : 0;
+    if (p.web) return '<a class="btn ' + cls + '" data-try href="' + TRY_URL + '">' + (mine === 'ios' ? 'Add to iPhone' : 'Open the web app') + '</a>';
+    var a = asset(p.files[idx].asset);
+    return '<button type="button" class="btn ' + cls + '" data-platform="' + mine + '" data-asset="' + idx + '"' + (a && !a.ok ? ' disabled' : '') + '><span class="lbl">Download for ' + p.name + '</span> <span class="meta">' + metaFor(a) + '</span></button>';
+  }
+  function renderCTAs() {
+    // computers: the extension comes first, then the app · phones: the app comes first
+    var p = P[mine], a = p.web ? { ok: true } : asset(p.files[armWin ? 2 : 0].asset), appReady = !a || a.ok;
+    var web = function (cls) { return '<a class="btn ' + cls + '" data-try href="' + TRY_URL + '">Open the web app</a>'; };
+    var heroHTML = isMobile
+      ? (appReady ? appButton('btn-primary') + (p.web ? '' : web('btn-ghost')) : web('btn-primary') + appButton('btn-ghost'))
+      : extHTML() + appButton('btn-ghost') + (EXT.kind !== 'store' || !appReady ? web('btn-ghost') : '');
+    $('hero-cta').innerHTML = heroHTML;
+    $('final-cta').innerHTML = heroHTML;
+    var hn = $('hero-note'), n = isMobile ? '' : extNote();
+    hn.hidden = !n; hn.textContent = n;
+  }
+  function renderExtSection() {
+    $('ext-title').textContent = EXT.kind === 'store' ? 'Shelf Shelf for ' + (byId[B] && byId[B].url ? byId[B].name : NAMES[B] === 'your browser' ? 'Chrome' : NAMES[B]) : 'Shelf Shelf for your browser';
+    $('ext-cta').innerHTML = extHTML();
+    var n = extNote(), el = $('ext-note'); el.hidden = !n; el.textContent = n;
+    $('store-row').innerHTML = STORES.map(function (s) { return '<span class="chip' + (s.url ? ' live' : '') + '">' + esc(s.name) + (s.url ? ' · Available' : ' · Coming soon') + '</span>'; }).join('');
+  }
+  function renderRelease() {
+    var el = $('release');
+    if (release && release.tag_name) {
+      var d = new Date(release.published_at || release.created_at);
+      el.innerHTML = '<span class="dot"></span> Latest <b>' + esc(release.name || release.tag_name) + '</b> · ' + d.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+    } else if (release) el.innerHTML = '<span class="dot wait"></span> Desktop and Android apps <b>coming soon</b> · <a href="' + TRY_URL + '" data-try>use the web app now</a>';
+    else el.innerHTML = '<a href="https://github.com/' + REPO + '/releases">See all releases</a>';
+  }
+  function renderAll() { renderCards(); renderCTAs(); renderRelease(); }
+
+  renderExtSection(); renderAll();
+  fetch('https://api.github.com/repos/' + REPO + '/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
+    .then(function (r) {
+      if (r.status === 404) return { assets: [] };              // no release published yet
+      if (!r.ok) throw new Error(String(r.status));
+      return r.json();
+    })
+    .then(function (j) { release = j; })
+    .catch(function () { releaseFailed = true; })
+    .then(renderAll);
+
+  /* ---------- the browser menu (split button) ---------- */
+  function closeMenus(except) {
+    [].forEach.call(document.querySelectorAll('.split .menu'), function (m) {
+      if (m === except) return;
+      m.hidden = true; var c = m.parentNode.querySelector('.split-caret'); if (c) c.setAttribute('aria-expanded', 'false');
+    });
+  }
+  function items(menu) { return [].slice.call(menu.querySelectorAll('[role=menuitem]:not([aria-disabled=true])')); }
+  document.addEventListener('click', function (e) {
+    var caret = e.target.closest && e.target.closest('.split-caret');
+    if (caret) {
+      var menu = caret.parentNode.querySelector('.menu'), open = menu.hidden;
+      closeMenus(menu);
+      menu.hidden = !open; caret.setAttribute('aria-expanded', String(open));
+      if (open) {
+        menu.classList.remove('up');
+        var r = caret.getBoundingClientRect(), h = menu.offsetHeight + 16;
+        menu.classList.toggle('up', window.innerHeight - r.bottom < h && r.top > h);
+        var first = items(menu)[0]; if (first) first.focus();
+      }
+      return;
+    }
+    var dis = e.target.closest && e.target.closest('.menu [aria-disabled=true]');
+    if (dis) { e.preventDefault(); toast('Coming soon — this store isn’t live yet.'); return; }
+    if (!(e.target.closest && e.target.closest('.menu'))) closeMenus();
+    var cp = e.target.closest && e.target.closest('[data-copy]');
+    if (cp) {
+      var link = location.href.split('#')[0] + '#extension';
+      var done = function () { toast('Link copied — open it on your computer.'); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(link).then(done, function () { prompt('Copy this link:', link); });
+      else prompt('Copy this link:', link);
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    var menu = document.activeElement && document.activeElement.closest && document.activeElement.closest('.menu');
+    if (e.key === 'Escape') { if (menu) { var c = menu.parentNode.querySelector('.split-caret'); closeMenus(); c && c.focus(); } else { closeMenus(); closeSheet(); } return; }
+    if (menu && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
+      e.preventDefault();
+      var list = items(menu), i = list.indexOf(document.activeElement);
+      var n = list[(i + (e.key === 'ArrowDown' ? 1 : -1) + list.length) % list.length]; if (n) n.focus();
+    }
+  });
+
+  /* ---------- download with clear feedback ---------- */
+  var sheet = $('sheet'), stateEl = $('sheet-state'), timers = [];
+  function startDownload(btn) {
+    var id = btn.dataset.platform, p = P[id];
+    var f = p.files[+btn.dataset.asset || 0];
+    var a = asset(f.asset) || { url: LATEST + f.asset, size: null, ok: true };
+    if (!a.ok) return;
+    var label = btn.querySelector('.lbl'), meta = btn.querySelector('.meta');
+    var oldLabel = label.innerHTML, oldMeta = meta.innerHTML;
+    btn.classList.add('is-loading'); btn.setAttribute('aria-busy', 'true');
+    label.innerHTML = '<span class="spin"></span>'; meta.textContent = 'Preparing your download…';
+    $('sheet-title').textContent = 'Shelf Shelf for ' + p.name;
+    $('sheet-file').textContent = f.asset;
+    $('sheet-size').textContent = a.size ? fmtSize(a.size) : '';
+    $('sheet-steps').innerHTML = p.steps.map(function (s) { return '<li>' + s + '</li>'; }).join('');
+    $('sheet-retry').href = a.url;
+    stateEl.innerHTML = '<span class="spin"></span>Starting your download…';
+    sheet.classList.add('open');
+    timers.forEach(clearTimeout); timers = [];
+    timers.push(setTimeout(function () { location.href = a.url; }, 650));
+    timers.push(setTimeout(function () {
+      stateEl.innerHTML = '<span class="check">✓</span>Your download has started — check your Downloads folder.';
+      btn.classList.remove('is-loading'); btn.removeAttribute('aria-busy'); label.innerHTML = oldLabel; meta.innerHTML = oldMeta;
+    }, 1900));
+  }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('button[data-platform]');
+    if (b && !b.disabled) { e.preventDefault(); startDownload(b); }
+  });
+  function closeSheet() { sheet.classList.remove('open'); }
+  $('sheet-close').onclick = closeSheet;
+  $('sheet-other').onclick = closeSheet;
+  sheet.addEventListener('click', function (e) { if (e.target === sheet) closeSheet(); });
+
+  /* ---------- demo videos: shown only when the files are in media/ ---------- */
+  var VIDEOS = [
+    { label: '30-second tour', file: 'media/ShelfShelf-30s-Horizontal.mp4', poster: 'media/home.jpg' },
+    { label: 'Full demo', file: 'media/ShelfShelf-Demo.mp4', poster: 'media/home.jpg' },
+    { label: 'Phone view', file: 'media/ShelfShelf-30s-Vertical.mp4', poster: 'media/m-home.jpg', vert: true }
+  ];
+  Promise.all(VIDEOS.map(function (v) { return fetch(v.file, { method: 'HEAD' }).then(function (r) { return r.ok ? v : null; }, function () { return null; }); }))
+    .then(function (list) {
+      list = list.filter(Boolean); if (!list.length) return;
+      var vid = $('demo-video'), box = $('video'), tabs = $('vtabs');
+      function pick(v) {
+        [].forEach.call(tabs.children, function (b) { b.setAttribute('aria-pressed', String(b.textContent === v.label)); });
+        box.classList.toggle('vert', !!v.vert); vid.poster = v.poster; vid.src = v.file; vid.play().catch(function () {});
+      }
+      tabs.innerHTML = list.length > 1 ? list.map(function (v) { return '<button type="button" aria-pressed="false">' + esc(v.label) + '</button>'; }).join('') : '';
+      [].forEach.call(tabs.children, function (b, i) { b.onclick = function () { pick(list[i]); }; });
+      $('demo').hidden = false; pick(list[0]);
+      if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) vid.play().catch(function () {}); else vid.pause(); }); }, { threshold: .3 }).observe(box);
+    });
+
+  /* ---------- gentle reveal on scroll ---------- */
+  var rv = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) [].forEach.call(rv, function (e) { e.classList.add('in'); });
+  else { var ob = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('in'); ob.unobserve(x.target); } }); }, { threshold: .12 }); [].forEach.call(rv, function (e) { ob.observe(e); }); }
+})();
+</script>
+</body>
+</html>
