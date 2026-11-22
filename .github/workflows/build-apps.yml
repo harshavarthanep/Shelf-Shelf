@@ -1,0 +1,177 @@
+# Shelf Shelf — builds the Windows, Mac, Linux and Android apps from the web app
+# (index.html, css/, js/, icons/) and publishes them as a GitHub Release.
+# Built by H24 Creationz.
+#
+# Run it: GitHub → Actions → "Build Shelf Shelf apps" → Run workflow → type a
+# version (e.g. 1.0.1) → Run.  About 15 minutes later every download button on
+# download.html points at the new version.
+name: Build Shelf Shelf apps
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number (e.g. 1.0.1) — must be higher than the last one'
+        required: true
+        default: '1.0.0'
+
+permissions:
+  contents: write
+
+env:
+  APP_VERSION: ${{ github.event.inputs.version }}
+  NODE_VERSION: '22'
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '${{ env.NODE_VERSION }}' }
+      - name: Build Windows (Intel & AMD installer + portable, ARM installer)
+        working-directory: native/desktop
+        shell: bash
+        run: |
+          npm install --no-audit --no-fund
+          npm version "$APP_VERSION" --no-git-tag-version --allow-same-version
+          node ../shared/prepare-www.mjs www
+          npx electron-builder --win nsis portable --x64 --publish never
+          npx electron-builder --win nsis --arm64 --publish never
+          ls -la dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows
+          if-no-files-found: error
+          path: |
+            native/desktop/dist/ShelfShelf-Setup-x64.exe
+            native/desktop/dist/ShelfShelf-Setup-arm64.exe
+            native/desktop/dist/ShelfShelf-Portable.exe
+
+  mac:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '${{ env.NODE_VERSION }}' }
+      - name: Build Mac (one app for Intel and Apple Silicon)
+        working-directory: native/desktop
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+        run: |
+          npm install --no-audit --no-fund
+          npm version "$APP_VERSION" --no-git-tag-version --allow-same-version
+          node ../shared/prepare-www.mjs www
+          npx electron-builder --mac dir --universal --publish never
+          # free "ad-hoc" signature so Apple Silicon Macs don't call it damaged
+          codesign --force --deep --sign - "dist/mac-universal/Shelf Shelf.app"
+          npx electron-builder --mac dmg --universal --prepackaged "dist/mac-universal/Shelf Shelf.app" --publish never
+          ls -la dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mac
+          if-no-files-found: error
+          path: native/desktop/dist/ShelfShelf-Mac.dmg
+
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '${{ env.NODE_VERSION }}' }
+      - name: Build Linux (AppImage + .deb)
+        working-directory: native/desktop
+        run: |
+          npm install --no-audit --no-fund
+          npm version "$APP_VERSION" --no-git-tag-version --allow-same-version
+          node ../shared/prepare-www.mjs www
+          npx electron-builder --linux AppImage deb --x64 --publish never
+          ls -la dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux
+          if-no-files-found: error
+          path: |
+            native/desktop/dist/ShelfShelf-Linux.AppImage
+            native/desktop/dist/ShelfShelf-Linux.deb
+
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '${{ env.NODE_VERSION }}' }
+      - uses: actions/setup-java@v4
+        with: { distribution: 'temurin', java-version: '21' }
+      # GitHub's Linux computer already has the Android SDK — just accept its licences.
+      - name: Android SDK
+        run: |
+          echo "Android SDK at $ANDROID_HOME"
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+      - name: Create the Android project
+        working-directory: native/mobile
+        run: |
+          rm -rf android www
+          npm install --no-audit --no-fund
+          node ../shared/prepare-www.mjs www
+          npx cap add android
+          npx capacitor-assets generate --android --iconBackgroundColor '#4F7BF2' --iconBackgroundColorDark '#4F7BF2' --splashBackgroundColor '#F2F2F7' --splashBackgroundColorDark '#000000'
+          node android-extras.mjs "$APP_VERSION"
+          npx cap sync android
+      - name: Signing key
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        working-directory: native/mobile/android
+        run: |
+          if [ -n "$KEYSTORE_B64" ]; then echo "$KEYSTORE_B64" | base64 -d > app/shelfshelf.keystore; echo "Signing key found"; fi
+      - name: Build the APK
+        working-directory: native/mobile/android
+        env:
+          KS_PASS: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASS: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          chmod +x gradlew
+          if [ -f app/shelfshelf.keystore ]; then
+            ./gradlew assembleRelease --no-daemon \
+              -Pandroid.injected.signing.store.file="$PWD/app/shelfshelf.keystore" \
+              -Pandroid.injected.signing.store.password="$KS_PASS" \
+              -Pandroid.injected.signing.key.alias="$KEY_ALIAS" \
+              -Pandroid.injected.signing.key.password="$KEY_PASS"
+            cp app/build/outputs/apk/release/app-release.apk ../ShelfShelf-Android.apk
+          else
+            echo "::warning::No signing key secrets found — building a debug APK. It installs fine, but add the secrets so updates install over it."
+            ./gradlew assembleDebug --no-daemon
+            cp app/build/outputs/apk/debug/app-debug.apk ../ShelfShelf-Android.apk
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: android
+          if-no-files-found: error
+          path: native/mobile/ShelfShelf-Android.apk
+
+  release:
+    needs: [windows, mac, linux, android]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with: { path: out, merge-multiple: true }
+      - run: ls -la out
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ env.APP_VERSION }}
+          name: Shelf Shelf ${{ env.APP_VERSION }}
+          make_latest: true
+          body: |
+            **Shelf Shelf ${{ env.APP_VERSION }}** — your favourite sites as apps, folders and a dock, plus to-dos with reminders. Built by H24 Creationz.
+
+            | Device | Download |
+            |---|---|
+            | Windows (Intel & AMD) | `ShelfShelf-Setup-x64.exe` — or `ShelfShelf-Portable.exe`, no install |
+            | Windows on ARM | `ShelfShelf-Setup-arm64.exe` |
+            | Mac (Intel & Apple Silicon) | `ShelfShelf-Mac.dmg` |
+            | Linux | `ShelfShelf-Linux.AppImage` or `ShelfShelf-Linux.deb` |
+            | Android | `ShelfShelf-Android.apk` |
+
+            Easiest: open the download page — it picks the right file for your device.
+          files: out/*
